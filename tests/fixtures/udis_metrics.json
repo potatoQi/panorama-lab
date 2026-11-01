@@ -1,0 +1,12 @@
+{
+  "rng_seed": 841,
+  "expected": {
+    "psnr_db": 9.617296882813008,
+    "ssim": 0.045440122501094665
+  },
+  "reference": "scikit-image 0.15.0, compare_psnr/compare_ssim as called by UDIS2 Warp/Codes/test.py",
+  "source_sha256": {
+    "ssim015": "a469e8e11a779e8766592674d5cf753f023e3e8c006bcb36323c498285584374",
+    "psnr015": "e80eff535b5ce430541f1f49e6a3fd6cd287e609187f2212938d6bb5162a999b"
+  }
+}

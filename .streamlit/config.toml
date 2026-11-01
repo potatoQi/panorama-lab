@@ -1,0 +1,20 @@
+[theme]
+base = "light"
+primaryColor = "#5C307D"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F5F3F7"
+textColor = "#29252D"
+borderColor = "#DED9E3"
+font = "sans serif"
+baseFontSize = 14
+baseRadius = "none"
+buttonRadius = "none"
+showWidgetBorder = true
+chartCategoricalColors = ["#5C307D", "#9476AD", "#C5B5D2"]
+[server]
+address = "127.0.0.1"
+headless = true
+[browser]
+gatherUsageStats = false
+[client]
+toolbarMode = "minimal"

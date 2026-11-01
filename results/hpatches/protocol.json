@@ -1,0 +1,53 @@
+{
+  "manifest_sha256": "da4081ce6f58a4ee693ef4cfd7c52f8d117cd8a0531c8a1863a56deb392ce7d0",
+  "code": {
+    "source_sha256": "233aa266f9bcca422c428719c8381429a68eb5faa6c64636838f461b4a39af7f"
+  },
+  "protocol_id": "hpatches-superpoint2018-v1",
+  "evaluation": {
+    "name": "SuperPoint 2018, section 7.3 and appendix A",
+    "reference": "https://arxiv.org/abs/1712.07629",
+    "preprocessing": "OpenCV grayscale decode and INTER_LINEAR resize to width=640, height=480; no crop.",
+    "max_features": 1000,
+    "matching": "One-way nearest neighbor, L2 for floating descriptors / Hamming for ORB; no ratio or mutual filter; no ground-truth feature filtering.",
+    "estimator": "OpenCV findHomography RANSAC: 3 px, maxIters=2000, confidence=0.995, RNG seed=42.",
+    "geometry": "Mean error of four corners in resized-image pixels; H-Acc <= 1/3/5; all failed estimates count as incorrect.",
+    "failure_policy": "No extra inlier-count, inlier-ratio or photometric-overlap gate.",
+    "comparability": "公开评测设置对齐；原论文评测代码未公开，具体实现存在差异。"
+  },
+  "source": "https://github.com/hpatches/hpatches-dataset",
+  "dataset_protocol": "All 116 sequences, reference image 1 against 2..6 (580 pairs), no sequence exclusion. Homography estimation protocol, not the original descriptor-patch benchmark.",
+  "split": null,
+  "methods": [
+    "harris",
+    "orb",
+    "sift-plain",
+    "sift",
+    "xfeat"
+  ],
+  "feature_metadata": {
+    "xfeat": {
+      "repository": "https://github.com/verlab/accelerated_features",
+      "commit": "e92685f57f8318b18725c5c8c0bd28c7fe188d9a",
+      "weights_sha256": "0f5187fd7bedd26c7fe6acc9685444493a165a35ecc087b33c2db3627f3ea10b",
+      "torch": "2.5.1+cpu",
+      "device": "cpu",
+      "threads": 1,
+      "variant": "sparse detectAndCompute; no XFeat* or LighterGlue",
+      "detection_threshold": 0.05,
+      "timing": "Model initialization and worker warmup excluded; pair I/O and inference included."
+    }
+  },
+  "max_size": 640,
+  "max_features": 1000,
+  "ratio": null,
+  "ransac_threshold_px": 3.0,
+  "seed": 42,
+  "workers": 4,
+  "pairs": 580,
+  "available_pairs": 580,
+  "is_subset": false,
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "opencv": "5.0.0"
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "dataset": "APAP",
+    "method": "harris",
+    "pairs": 27,
+    "succeeded": 26,
+    "success_rate": 0.9629629629629629,
+    "mean_seconds": 0.9799755911204826,
+    "protocol": "legacy-v1",
+    "inlier_ratio": 0.8484461266360621,
+    "inlier_rmse_px": 1.2877293823069367,
+    "overlap_psnr_db": 19.101275860014674,
+    "overlap_ssim": 0.6099103510976571,
+    "overlap_fraction": 0.5370082393784452
+  },
+  {
+    "dataset": "APAP",
+    "method": "orb",
+    "pairs": 27,
+    "succeeded": 26,
+    "success_rate": 0.9629629629629629,
+    "mean_seconds": 0.2817586034156934,
+    "protocol": "legacy-v1",
+    "inlier_ratio": 0.8505438199158791,
+    "inlier_rmse_px": 1.3745418790913233,
+    "overlap_psnr_db": 18.876523739434063,
+    "overlap_ssim": 0.5859915364523859,
+    "overlap_fraction": 0.5362688525572049
+  },
+  {
+    "dataset": "APAP",
+    "method": "sift",
+    "pairs": 27,
+    "succeeded": 27,
+    "success_rate": 1.0,
+    "mean_seconds": 0.4320737649169233,
+    "protocol": "legacy-v1",
+    "inlier_ratio": 0.790773608328403,
+    "inlier_rmse_px": 1.1532724591941907,
+    "overlap_psnr_db": 19.201373701940515,
+    "overlap_ssim": 0.6267560531094598,
+    "overlap_fraction": 0.5219038564305575
+  },
+  {
+    "dataset": "APAP",
+    "method": "sift-plain",
+    "pairs": 27,
+    "succeeded": 27,
+    "success_rate": 1.0,
+    "mean_seconds": 0.4292462033012675,
+    "protocol": "legacy-v1",
+    "inlier_ratio": 0.7697184064139683,
+    "inlier_rmse_px": 1.1520423528860182,
+    "overlap_psnr_db": 19.180632810339816,
+    "overlap_ssim": 0.6206093662385691,
+    "overlap_fraction": 0.5202130087126621
+  },
+  {
+    "dataset": "APAP",
+    "method": "xfeat",
+    "pairs": 27,
+    "succeeded": 27,
+    "success_rate": 1.0,
+    "mean_seconds": 0.4117888049222529,
+    "protocol": "legacy-v1",
+    "inlier_ratio": 0.7337902274761889,
+    "inlier_rmse_px": 1.4447037839482373,
+    "overlap_psnr_db": 18.694939903702362,
+    "overlap_ssim": 0.5880979162570877,
+    "overlap_fraction": 0.5329867884920133
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/verlab/accelerated_features",
+  "commit": "e92685f57f8318b18725c5c8c0bd28c7fe188d9a",
+  "files": {
+    "modules/xfeat.py": "385ccd31d095b0d4176b04e982088b85321b11ade4324f83b097ee6524f2a6e7",
+    "modules/model.py": "d9a665f18fcea5eaf3e278925e1a92103afcba9051e05b2334f3daa29f411964",
+    "modules/interpolator.py": "d63a6163eb6fff81e8720231f62537a42a69fccb44dc8851b04de5115daab4da",
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "weights/xfeat.pt": "0f5187fd7bedd26c7fe6acc9685444493a165a35ecc087b33c2db3627f3ea10b"
+  },
+  "adaptation": "Sparse inference only: removed unused dense matching, XFeat*, LightGlue, matching helpers and duplicate weight loading; explicit relative imports and CPU initialization. Sparse extraction method bodies, model architecture, interpolator and pretrained weights retain upstream behavior."
+}

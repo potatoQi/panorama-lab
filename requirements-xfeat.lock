@@ -1,0 +1,5 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu
+fsspec==2026.9.0
+sympy==1.13.1
+mpmath==1.3.0

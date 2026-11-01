@@ -1,0 +1,55 @@
+{
+  "manifest_sha256": "908788afeecc68b9900375b60c8d432b4276187db2151723541f1554fc583e85",
+  "code": {
+    "source_sha256": "233aa266f9bcca422c428719c8381429a68eb5faa6c64636838f461b4a39af7f"
+  },
+  "protocol_id": "udis2-2023-v1",
+  "evaluation": {
+    "name": "UDIS++ 2023, section 4.2.1 and official Warp/Codes/test.py",
+    "reference": "https://arxiv.org/abs/2302.08207",
+    "reference_code": "https://github.com/nie-lang/UDIS2/blob/b4158950ab1411268c67a48169ba732a19d399d0/Warp/Codes/test.py",
+    "reference_commit": "b4158950ab1411268c67a48169ba732a19d399d0",
+    "preprocessing": "OpenCV color decode, original 512x512 test images, float32 normalized to [-1,1].",
+    "max_features": 1800,
+    "matching": "Our feature pipeline: ratio=0.78 and mutual nearest neighbor.",
+    "estimator": "Our normalized DLT/RANSAC, seed=42, threshold=3px; at least 12 inliers and 20% inlier ratio.",
+    "photometry": "Warp input2 into input1 with bilinear interpolation; apply the warped all-ones mask to both color images; PSNR over the entire image; per-channel SSIM (7x7 uniform window, sample covariance), data_range=255; no mask erosion, cropping or blending.",
+    "failure_policy": "Identity warp on estimation failure (paper section 4.2.1); every test pair contributes to PSNR/SSIM.",
+    "comparability": "测试集与指标口径对齐；匹配和图像变形实现不同。"
+  },
+  "source": "https://github.com/nie-lang/UnsupervisedDeepImageStitching",
+  "dataset_protocol": "Complete official testing split: 1106 filename-matched pairs. Missing input1/000001.jpg restored from UniStitch authors' supplement. No training images or test exclusions. Evaluation protocol is chosen by the benchmark runner.",
+  "split": "testing",
+  "methods": [
+    "harris",
+    "orb",
+    "sift-plain",
+    "sift",
+    "xfeat"
+  ],
+  "feature_metadata": {
+    "xfeat": {
+      "repository": "https://github.com/verlab/accelerated_features",
+      "commit": "e92685f57f8318b18725c5c8c0bd28c7fe188d9a",
+      "weights_sha256": "0f5187fd7bedd26c7fe6acc9685444493a165a35ecc087b33c2db3627f3ea10b",
+      "torch": "2.5.1+cpu",
+      "device": "cpu",
+      "threads": 1,
+      "variant": "sparse detectAndCompute; no XFeat* or LighterGlue",
+      "detection_threshold": 0.05,
+      "timing": "Model initialization and worker warmup excluded; pair I/O and inference included."
+    }
+  },
+  "max_size": 512,
+  "max_features": 1800,
+  "ratio": 0.78,
+  "ransac_threshold_px": 3.0,
+  "seed": 42,
+  "workers": 4,
+  "pairs": 1106,
+  "available_pairs": 1106,
+  "is_subset": false,
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "opencv": "5.0.0"
+}

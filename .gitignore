@@ -1,0 +1,26 @@
+# 原始数据、缓存与逐次运行产物不进入 Git。
+data/
+runs/
+work/
+presentation/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+.env
+.streamlit/secrets.toml
+build/
+dist/
+
+.cache/
+
+# Local credentials and editor state.
+.env.*
+!.env.example
+*.pem
+*.key
+.vscode/
+.idea/

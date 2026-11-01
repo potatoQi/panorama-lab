@@ -1,0 +1,39 @@
+[
+  {
+    "name": "apap",
+    "source": "https://cs.adelaide.edu.au/~tjchin/apap/files/images.zip",
+    "sha256": "56ea46bbe13bf720f69d4a6dd5c3b2d15ce4f8db63f3d52fb0fe4a439b95cd60",
+    "bytes": 21974546
+  },
+  {
+    "name": "apap2",
+    "source": "https://cs.adelaide.edu.au/~tjchin/apap/files/images2.zip",
+    "sha256": "8f52c52152a976e2850528feac510bc6e5b8d1a761737e04f8f65550d217b752",
+    "bytes": 24520429
+  },
+  {
+    "name": "apap3",
+    "source": "https://cs.adelaide.edu.au/~tjchin/apap/files/images3.zip",
+    "sha256": "9f57f9f3b6f9db3f81ec63d754975aed7244b8ff9e239bfaee2ba1890fee2eb6",
+    "bytes": 4241107
+  },
+  {
+    "name": "hpatches",
+    "source": "https://huggingface.co/datasets/vbalnt/hpatches/resolve/main/hpatches-sequences-release.zip",
+    "sha256": "99cf7e1ca167896eb4ca2fe3d903beff6566243a3c0c8e07a13a2596648ad670",
+    "bytes": 1279545572
+  },
+  {
+    "name": "udis-d",
+    "source": "https://drive.usercontent.google.com/download?id=1unnBdPg9Vi12-1xXoUdzMub_XUq7yZz0&export=download&confirm=t",
+    "sha256": "7e7b6c0b930a18e177b83409680f57077f7d92a84d3f66a26c81a03d4eea3478",
+    "bytes": 203439521
+  },
+  {
+    "name": "udis-d-input1-000001",
+    "source": "https://drive.usercontent.google.com/download?id=1M_-lqNdICT4tM3CWLK2WOcPCIzeQdc4d&export=download&confirm=t",
+    "sha256": "bbf99e1817f20f706e3fa2b68f2adaca0ae49dbb8f9a2ccf2410ebbc878f0d18",
+    "bytes": 134227,
+    "provenance": "https://github.com/MmelodYy/UniStitch#-dataset"
+  }
+]

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "panorama-lab"
+version = "0.1.0"
+description = "可复现的全景拼接与几何评测"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "opencv-python-headless>=4.8", "Pillow>=10", "pillow-heif>=0.16", "scikit-image>=0.22", "streamlit>=1.65", "pandas>=2", "requests>=2.31"]
+
+[project.optional-dependencies]
+xfeat = ["torch==2.5.1"]
+dev = ["pytest>=8", "ruff>=0.9"]
+
+[project.scripts]
+panorama = "panorama.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["src/panorama/_vendor"]
+force-exclude = true
+
+[tool.setuptools.package-data]
+"panorama._vendor.xfeat" = ["LICENSE", "SOURCE.json"]
