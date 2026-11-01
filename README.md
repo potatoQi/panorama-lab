@@ -15,7 +15,7 @@ python -m panorama.xfeat
 panorama ui
 ```
 
-打开 http://localhost:8501。命令行拼接：
+打开 [http://localhost:8501](http://localhost:8501)。命令行拼接：
 
 ```bash
 panorama stitch /path/to/images --output runs/demo
